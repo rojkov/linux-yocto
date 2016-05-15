@@ -62,7 +62,7 @@ static int ima_fix_xattr(struct dentry *dentry,
 	rc = __vfs_setxattr_noperm(dentry, XATTR_NAME_IMA,
 				   &iint->ima_hash->xattr.data[offset],
 				   (sizeof(iint->ima_hash->xattr) - offset) +
-				   iint->ima_hash->length, 0);
+				   iint->ima_hash->length, XATTR_IMA_UPDATE);
 	return rc;
 }
 

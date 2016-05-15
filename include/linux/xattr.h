@@ -16,6 +16,8 @@
 #include <linux/spinlock.h>
 #include <uapi/linux/xattr.h>
 
+#define XATTR_IMA_UPDATE (XATTR_REPLACE << 1) /* inode mutex locked by IMA */
+
 struct inode;
 struct dentry;
 
